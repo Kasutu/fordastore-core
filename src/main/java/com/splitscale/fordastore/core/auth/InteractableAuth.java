@@ -1,6 +1,6 @@
 package com.splitscale.fordastore.core.auth;
 
-public interface Auth {
+public interface InteractableAuth {
   void login();
 
   void logout();

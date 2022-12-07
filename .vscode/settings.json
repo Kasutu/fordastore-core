@@ -1,6 +1,13 @@
 {
   "cSpell.words": [
-    "fordastore"
+    "Encryptable",
+    "Encryptor",
+    "fordastore",
+    "Interactable",
+    "Interactor",
+    "Sessionable",
+    "Sessionized",
+    "Tokenizable"
   ],
   "java.configuration.updateBuildConfiguration": "interactive"
 }

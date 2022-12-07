@@ -1,7 +1,8 @@
 package com.splitscale.fordastore.core.user;
 
-public interface UserDisplayable {
-  long getID();
-
+public interface DisplayableUser {
   String getUsername();
+
+  String getUID();
+
 }
