@@ -1,5 +1,9 @@
 package com.splitscale.fordastore.core.security;
 
 public interface SecurityService {
-  Encryptable getEncryptor();
+
+  String encrypt(String input);
+
+  boolean compareEncryption(String input, String encryptedInput);
+
 }

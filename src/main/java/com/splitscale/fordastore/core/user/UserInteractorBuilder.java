@@ -13,7 +13,7 @@ public class UserInteractorBuilder implements UserInteractor {
 
   @Override
   public DisplayableUser authUser(TokenizedBasicAuth request) {
-    User user = dao.readUserByUID("some-id");
+    User user = dao.getUserByUsername(request.getUsername());
 
     return new DisplayableUserBuilder(user);
   }

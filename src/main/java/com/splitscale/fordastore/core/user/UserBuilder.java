@@ -2,6 +2,7 @@ package com.splitscale.fordastore.core.user;
 
 public class UserBuilder implements User {
   private String username;
+  private String password;
   private String uid;
 
   public UserBuilder() {
@@ -14,8 +15,9 @@ public class UserBuilder implements User {
    * @param uid
    *                 - generated before storing in the database
    */
-  public UserBuilder(String username, String uid) {
+  public UserBuilder(String uid, String username, String password) {
     this.username = username;
+    this.password = password;
     this.uid = uid;
   }
 
@@ -37,6 +39,16 @@ public class UserBuilder implements User {
   @Override
   public void setUID(String uid) {
     this.uid = uid;
+  }
+
+  @Override
+  public String getPassword() {
+    return password;
+  }
+
+  @Override
+  public void setPassword(String password) {
+    this.password = password;
   }
 
 }

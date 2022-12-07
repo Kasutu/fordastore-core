@@ -5,9 +5,15 @@ import java.util.Map;
 
 public class MessageBuilder implements Message {
   private String message;
+  private boolean status;
+
+  public MessageBuilder(String message, boolean status) {
+    this.message = message;
+    this.status = status;
+  }
 
   public MessageBuilder(String message) {
-    this.message = message;
+    this(message, false);
   }
 
   @Override
@@ -17,5 +23,10 @@ public class MessageBuilder implements Message {
     msg.put("message", message);
 
     return msg;
+  }
+
+  @Override
+  public boolean getStatus() {
+    return status;
   }
 }

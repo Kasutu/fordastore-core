@@ -13,7 +13,7 @@ public interface UserDAO {
    * 
    *         - returns a User object along with password
    */
-  User readUserByUsername(String username);
+  User getUserByUsername(String username);
 
   /**
    * 
@@ -23,7 +23,7 @@ public interface UserDAO {
    *         - returns a User object along with password
    */
 
-  User readUserByUID(String uid);
+  User getUserByUID(String uid);
 
   /**
    * 
@@ -32,7 +32,7 @@ public interface UserDAO {
    * 
    *         - returns a User object along with password
    */
-  User readUserById(long id);
+  User getUserById(long id);
 
   /**
    * 

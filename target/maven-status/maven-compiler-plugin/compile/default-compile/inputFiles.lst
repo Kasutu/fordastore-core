@@ -15,11 +15,11 @@ D:\dev\se_projects\splitscale\fordastore-core\src\main\java\com\splitscale\forda
 D:\dev\se_projects\splitscale\fordastore-core\src\main\java\com\splitscale\fordastore\core\security\Tokenizable.java
 D:\dev\se_projects\splitscale\fordastore-core\src\main\java\com\splitscale\fordastore\core\user\UserDAOBuilder.java
 D:\dev\se_projects\splitscale\fordastore-core\src\main\java\com\splitscale\fordastore\core\container\ContainerData.java
+D:\dev\se_projects\splitscale\fordastore-core\src\main\java\com\splitscale\fordastore\core\user\UserInteractorBuilder.java
 D:\dev\se_projects\splitscale\fordastore-core\src\main\java\com\splitscale\fordastore\core\user\SessionizedUser.java
 D:\dev\se_projects\splitscale\fordastore-core\src\main\java\com\splitscale\fordastore\core\auth\BasicAuth.java
 D:\dev\se_projects\splitscale\fordastore-core\src\main\java\com\splitscale\fordastore\core\content\ContentDisplayable.java
 D:\dev\se_projects\splitscale\fordastore-core\src\main\java\com\splitscale\fordastore\core\security\Encryptable.java
-D:\dev\se_projects\splitscale\fordastore-core\src\main\java\com\splitscale\fordastore\core\user\InteractableUser.java
 D:\dev\se_projects\splitscale\fordastore-core\src\main\java\com\splitscale\fordastore\core\user\DisplayableUser.java
 D:\dev\se_projects\splitscale\fordastore-core\src\main\java\com\splitscale\fordastore\core\content\Credential.java
 D:\dev\se_projects\splitscale\fordastore-core\src\main\java\com\splitscale\fordastore\core\database\UserTableActions.java
