@@ -1,4 +1,4 @@
-package com.splitscale.fordastore.core.authentication;
+package com.splitscale.fordastore.core.user;
 
 public class UserBuilder implements User {
   private String username;

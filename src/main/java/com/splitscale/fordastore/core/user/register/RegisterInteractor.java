@@ -1,12 +1,12 @@
-package com.splitscale.fordastore.core.authentication.register;
+package com.splitscale.fordastore.core.user.register;
 
-import com.splitscale.fordastore.core.authentication.SecurityService;
-import com.splitscale.fordastore.core.authentication.User;
-import com.splitscale.fordastore.core.authentication.UserBuilder;
 import com.splitscale.fordastore.core.daos.UserRepository;
 import com.splitscale.fordastore.core.exceptions.ActionFailedException;
 import com.splitscale.fordastore.core.exceptions.ObjectAlreadyExistException;
 import com.splitscale.fordastore.core.exceptions.ObjectNotFoundException;
+import com.splitscale.fordastore.core.user.SecurityService;
+import com.splitscale.fordastore.core.user.User;
+import com.splitscale.fordastore.core.user.UserBuilder;
 
 public class RegisterInteractor {
   private UserRepository repository;
