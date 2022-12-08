@@ -1,9 +1,16 @@
 package com.splitscale.fordastore.core.container;
 
 public interface Container {
-  void createContent();
+  String getName();
 
-  void editContent();
+  long getContainerID();
 
-  void deleteContent();
+  long getOwnerID();
+
+  void setName(String name);
+
+  void setContainerID(long containerID);
+
+  void setOwnerID(long userID);
+
 }
