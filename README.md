@@ -1,60 +1,133 @@
 # Interface definitions
 
-## User Subsystem
+## DAOS
+
+### UserRepository
+
+```java
+public interface UserRepository {
+  public User findByUsername(String username);
+
+  public User findByUID(String uid);
+
+  public boolean add(User user);
+}
+```
+
+### ContentRepository
+
+```java
+public interface ContentRepository {
+
+  public List<Content> getALLByOwnerID(long ownerID);
+
+  public Content getByContentID(long contentID);
+
+  public Content add(Content container) throws ObjectAlreadyExistException, ActionFailedException;
+
+  public Content update(Content container) throws ActionFailedException;
+
+  public boolean delete(long containerID) throws ActionFailedException;
+}
+```
+
+### ContainerRepository
+
+```java
+public interface ContainerRepository {
+  public List<Container> getByOwnerID(long ownerID);
+
+  public Container getByContainerID(long containerID);
+
+  public Container getByName(String name);
+
+  public Container add(Container container) throws ObjectAlreadyExistException, ActionFailedException;
+
+  public Container update(Container container) throws ActionFailedException, ObjectNotFoundException;
+
+  public boolean delete(long containerID) throws ActionFailedException, ObjectNotFoundException;
+}
+```
+
+## Entities
 
 ### User
 
-```
+```java
 public interface User {
   String getUsername();
+
+  String getPassword();
+
   String getUID();
+
+  long getServerID();
+
   void setUsername(String username);
+
+  void setPassword(String password);
+
   void setUID(String uid);
+
+  void setServerID(long serverID);
 }
 ```
 
-### DisplayableUser
+### Content
 
-```
-public interface DisplayableUser {
-  String getUsername();
-  String getUID();
+```java
+
+public interface Content {
+
+  public String getData();
+
+  public Credential getCredential();
+
+  public void setData(String data);
+
+  public void setCredential(Credential credential);
 
 }
-```
-
-### InteractableUser
 
 ```
-public interface InteractableUser {
-  DisplayableUser authUser(TokenizedBasicAuth request);
-  Message deleteUser(TokenizedBasicAuth request, String uid);
-  Message updateUser(TokenizedBasicAuth request, String uid);
-}
-```
 
-### SerializedUser
+### Container
 
-```
-public interface SerializedUser extends Serializable, User {}
-```
+```java
+public interface Container {
+  String getName();
 
-### SessionizedUser
+  long getContainerID();
 
-```
-public interface SessionizedUser extends Sessionable, User {}
-```
+  long getOwnerID();
 
-### UserDAO
+  void setName(String name);
 
-```
-public interface UserDAO {
-  User createUser(String username, String password);
-  User readUserByUsername(String username);
-  User readUserByUID(String uid);
-  User readUserById(long id);
-  boolean updateUser(TokenizedBasicAuth userAuth, User newUser);
-  boolean deleteUser(TokenizedBasicAuth userAuth, User newUser);
+  void setContainerID(long containerID);
+
+  void setOwnerID(long userID);
+
 }
 
+```
+
+# Exception definitions
+
+### ActionFailedException
+
+```java
+public class ActionFailedException extends Exception
+
+```
+
+### ObjectNotFoundException
+
+```java
+public class ObjectAlreadyExistException extends Exception
+```
+
+### ObjectNotFoundException
+
+```java
+public class ObjectNotFoundException extends Exception
 ```
