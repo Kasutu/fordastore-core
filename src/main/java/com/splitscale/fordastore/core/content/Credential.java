@@ -5,7 +5,7 @@ public interface Credential {
 
   String getPassword();
 
-  void setUsername();
+  void setUsername(String username);
 
-  void setPassword();
+  void setPassword(String password);
 }
