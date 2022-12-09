@@ -1,8 +1,8 @@
 package com.splitscale.fordastore.core.user.login;
 
-import com.splitscale.fordastore.core.daos.UserRepository;
 import com.splitscale.fordastore.core.exceptions.ActionFailedException;
 import com.splitscale.fordastore.core.exceptions.ObjectNotFoundException;
+import com.splitscale.fordastore.core.repositories.UserRepository;
 import com.splitscale.fordastore.core.user.SecurityService;
 import com.splitscale.fordastore.core.user.User;
 

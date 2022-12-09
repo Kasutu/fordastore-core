@@ -1,9 +1,9 @@
 package com.splitscale.fordastore.core.container.edit;
 
 import com.splitscale.fordastore.core.container.Container;
-import com.splitscale.fordastore.core.daos.ContainerRepository;
 import com.splitscale.fordastore.core.exceptions.ActionFailedException;
 import com.splitscale.fordastore.core.exceptions.ObjectNotFoundException;
+import com.splitscale.fordastore.core.repositories.ContainerRepository;
 
 public class EditContainerInteractor {
   private ContainerRepository repository;
