@@ -1,6 +1,6 @@
-package com.splitscale.fordastore.core.user;
+package com.splitscale.fordastore.core.security;
 
-public interface SecurityService {
+public interface EncryptionService {
 
   String encrypt(String input);
 
