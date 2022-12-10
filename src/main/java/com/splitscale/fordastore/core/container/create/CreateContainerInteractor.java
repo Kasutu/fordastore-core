@@ -2,9 +2,9 @@ package com.splitscale.fordastore.core.container.create;
 
 import com.splitscale.fordastore.core.container.Container;
 import com.splitscale.fordastore.core.container.ContainerBuilder;
-import com.splitscale.fordastore.core.daos.ContainerRepository;
 import com.splitscale.fordastore.core.exceptions.ActionFailedException;
 import com.splitscale.fordastore.core.exceptions.ObjectAlreadyExistException;
+import com.splitscale.fordastore.core.repositories.ContainerRepository;
 
 public class CreateContainerInteractor {
   private ContainerRepository repository;

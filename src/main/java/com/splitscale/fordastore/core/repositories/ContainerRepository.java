@@ -1,4 +1,4 @@
-package com.splitscale.fordastore.core.daos;
+package com.splitscale.fordastore.core.repositories;
 
 import java.util.List;
 

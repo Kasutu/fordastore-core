@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.splitscale.fordastore.core.UserTest" time="0.066" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.splitscale.fordastore.core.UserTest" time="0.025" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="D:\dev\se_projects\splitscale\fordastore-core\target\test-classes;D:\dev\se_projects\splitscale\fordastore-core\target\classes;C:\Users\jerom\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\jerom\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.class.path" value="D:\dev\se_projects\splitscale\fordastore-core\target\test-classes;D:\dev\se_projects\splitscale\fordastore-core\target\classes;C:\Users\jerom\.m2\repository\org\mockito\mockito-junit-jupiter\4.9.0\mockito-junit-jupiter-4.9.0.jar;C:\Users\jerom\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.1\junit-jupiter-api-5.9.1.jar;C:\Users\jerom\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\jerom\.m2\repository\org\junit\platform\junit-platform-commons\1.9.1\junit-platform-commons-1.9.1.jar;C:\Users\jerom\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\jerom\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.1\junit-jupiter-engine-5.9.1.jar;C:\Users\jerom\.m2\repository\org\junit\platform\junit-platform-engine\1.9.1\junit-platform-engine-1.9.1.jar;C:\Users\jerom\.m2\repository\org\mockito\mockito-core\4.9.0\mockito-core-4.9.0.jar;C:\Users\jerom\.m2\repository\net\bytebuddy\byte-buddy\1.12.16\byte-buddy-1.12.16.jar;C:\Users\jerom\.m2\repository\net\bytebuddy\byte-buddy-agent\1.12.16\byte-buddy-agent-1.12.16.jar;C:\Users\jerom\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;"/>
     <property name="java.vm.vendor" value="Microsoft"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Microsoft\jdk-17.0.3.7-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\jerom\AppData\Local\Temp\surefire670076462742238784\surefirebooter7206991310319206878.jar C:\Users\jerom\AppData\Local\Temp\surefire670076462742238784 2022-12-07T22-29-08_227-jvmRun1 surefire18235281339716090789tmp surefire_06653742041221323986tmp"/>
+    <property name="sun.java.command" value="C:\Users\jerom\AppData\Local\Temp\surefire14234417963720712743\surefirebooter4831192514788349036.jar C:\Users\jerom\AppData\Local\Temp\surefire14234417963720712743 2022-12-10T17-27-15_020-jvmRun1 surefire11512854375655817503tmp surefire_04697446475659446967tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="D:\dev\se_projects\splitscale\fordastore-core\target\test-classes;D:\dev\se_projects\splitscale\fordastore-core\target\classes;C:\Users\jerom\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\jerom\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="surefire.test.class.path" value="D:\dev\se_projects\splitscale\fordastore-core\target\test-classes;D:\dev\se_projects\splitscale\fordastore-core\target\classes;C:\Users\jerom\.m2\repository\org\mockito\mockito-junit-jupiter\4.9.0\mockito-junit-jupiter-4.9.0.jar;C:\Users\jerom\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.1\junit-jupiter-api-5.9.1.jar;C:\Users\jerom\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\jerom\.m2\repository\org\junit\platform\junit-platform-commons\1.9.1\junit-platform-commons-1.9.1.jar;C:\Users\jerom\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\jerom\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.1\junit-jupiter-engine-5.9.1.jar;C:\Users\jerom\.m2\repository\org\junit\platform\junit-platform-engine\1.9.1\junit-platform-engine-1.9.1.jar;C:\Users\jerom\.m2\repository\org\mockito\mockito-core\4.9.0\mockito-core-4.9.0.jar;C:\Users\jerom\.m2\repository\net\bytebuddy\byte-buddy\1.12.16\byte-buddy-1.12.16.jar;C:\Users\jerom\.m2\repository\net\bytebuddy\byte-buddy-agent\1.12.16\byte-buddy-agent-1.12.16.jar;C:\Users\jerom\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\jerom"/>
     <property name="user.language" value="en"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\jerom\AppData\Local\Temp\surefire670076462742238784\surefirebooter7206991310319206878.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\jerom\AppData\Local\Temp\surefire14234417963720712743\surefirebooter4831192514788349036.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.3+7-LTS"/>
@@ -57,5 +57,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="com.splitscale.fordastore.core.UserTest" time="0.003"/>
+  <testcase name="settersTest" classname="com.splitscale.fordastore.core.UserTest" time="0.022"/>
+  <testcase name="gettersTest" classname="com.splitscale.fordastore.core.UserTest" time="0.003"/>
 </testsuite>
