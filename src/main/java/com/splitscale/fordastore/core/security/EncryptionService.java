@@ -4,6 +4,6 @@ public interface EncryptionService {
 
   String encrypt(String input);
 
-  boolean compareEncryption(String input, String encryptedInput);
+  boolean verify(String password, String hash);
 
 }

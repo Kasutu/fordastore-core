@@ -5,15 +5,12 @@ public interface User {
 
   String getPassword();
 
-  String getUID();
-
-  long getServerID();
+  String getUid();
 
   void setUsername(String username);
 
   void setPassword(String password);
 
-  void setUID(String uid);
+  void setUid(String uid);
 
-  void setServerID(long serverID);
 }

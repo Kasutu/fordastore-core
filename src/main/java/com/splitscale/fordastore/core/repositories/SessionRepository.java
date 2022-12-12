@@ -2,8 +2,15 @@ package com.splitscale.fordastore.core.repositories;
 
 import java.security.PublicKey;
 
-public interface SessionRepository {
-  public PublicKey getByUID(String id);
+import com.splitscale.fordastore.core.session.Token;
 
-  public boolean insert(PublicKey publicKey, String uid);
+public interface SessionRepository {
+  public PublicKey getByID(String id);
+
+  public boolean insert(Token token);
+
+  public boolean update(Token token);
+
+  public boolean deleteByID(Long id);
+
 }

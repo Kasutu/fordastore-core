@@ -1,4 +1,4 @@
-package com.splitscale.fordastore.core.security.auth;
+package com.splitscale.fordastore.core.security;
 
 import java.security.PublicKey;
 

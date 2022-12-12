@@ -11,8 +11,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import com.splitscale.fordastore.core.security.Authorization;
 import com.splitscale.fordastore.core.security.auth.AuthService;
-import com.splitscale.fordastore.core.security.auth.Authorization;
+import com.splitscale.fordastore.core.user.register.UserClaims;
 
 @ExtendWith(value = { MockitoExtension.class })
 public class AuthTest {
@@ -24,6 +25,9 @@ public class AuthTest {
 
   @Mock
   PublicKey publicKey;
+
+  @Mock
+  UserClaims userClaims;
 
   @Test
   @DisplayName("Test getters of Authorization")
@@ -40,12 +44,11 @@ public class AuthTest {
   @Test
   @DisplayName("Test getters of AuthService")
   public void AuthServiceGettersTest() {
-    String SOME_UID = "SOME_UID";
 
-    when(service.getAuthorization(SOME_UID)).thenReturn(auth);
-    when(service.authorize("some token", publicKey)).thenReturn(SOME_UID);
+    when(service.getAuthorization(userClaims)).thenReturn(auth);
+    when(service.authorize("some token", "some pk")).thenReturn(userClaims);
 
-    assertEquals(auth, service.getAuthorization(SOME_UID));
-    assertEquals(SOME_UID, service.authorize("some token", publicKey));
+    assertEquals(auth, service.getAuthorization(userClaims));
+    assertEquals(userClaims, service.authorize("some token", "some pk"));
   }
 }

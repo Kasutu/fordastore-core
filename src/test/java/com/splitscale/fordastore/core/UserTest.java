@@ -24,17 +24,14 @@ public class UserTest {
     String username = "someUsername";
     String password = "somePwd";
     String uid = "someUID";
-    long serverID = 130;
 
     when(user.getUsername()).thenReturn(username);
     when(user.getPassword()).thenReturn(password);
-    when(user.getUID()).thenReturn(uid);
-    when(user.getServerID()).thenReturn(serverID);
+    when(user.getUid()).thenReturn(uid);
 
     assertEquals(username, user.getUsername());
     assertEquals(password, user.getPassword());
-    assertEquals(uid, user.getUID());
-    assertEquals(serverID, user.getServerID());
+    assertEquals(uid, user.getUid());
   }
 
   @Test
@@ -43,19 +40,15 @@ public class UserTest {
     String username = "someUsername";
     String password = "somePwd";
     String uid = "someUID";
-    long serverID = 130;
 
     ArgumentCaptor<String> stringCaptor = ArgumentCaptor.forClass(String.class);
-    ArgumentCaptor<Long> longCaptor = ArgumentCaptor.forClass(long.class);
 
     user.setUsername(username);
     user.setPassword(password);
-    user.setUID(uid);
-    user.setServerID(serverID);
+    user.setUid(uid);
 
     verify(user).setUsername(stringCaptor.capture());
     verify(user).setPassword(stringCaptor.capture());
-    verify(user).setUID(stringCaptor.capture());
-    verify(user).setServerID(longCaptor.capture());
+    verify(user).setUid(stringCaptor.capture());
   }
 }
