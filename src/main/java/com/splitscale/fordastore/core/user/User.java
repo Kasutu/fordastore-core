@@ -1,16 +1,51 @@
 package com.splitscale.fordastore.core.user;
 
-public interface User {
-  String getUsername();
+public class User {
+  private Long id;
+  private String uid;
+  private String username;
+  private String password;
 
-  String getPassword();
+  public User() {
+    // default constructor
+  }
 
-  String getUid();
+  public User(Long id, String uid, String username, String password) {
+    this.id = id;
+    this.uid = uid;
+    this.username = username;
+    this.password = password;
+  }
 
-  void setUsername(String username);
+  public String getPassword() {
+    return password;
+  }
 
-  void setPassword(String password);
+  public void setPassword(String password) {
+    this.password = password;
+  }
 
-  void setUid(String uid);
+  public String getUsername() {
+    return username;
+  }
 
+  public void setUsername(String username) {
+    this.username = username;
+  }
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public String getUid() {
+    return uid;
+  }
+
+  public void setUid(String uid) {
+    this.uid = uid;
+  }
 }

@@ -1,18 +1,13 @@
 package com.splitscale.fordastore.core.user.register;
 
 import com.splitscale.fordastore.core.repositories.UserRepository;
-import com.splitscale.fordastore.core.security.EncryptionService;
+import com.splitscale.fordastore.core.user.User;
 import com.splitscale.fordastore.core.user.UserRequest;
 
 public class RegisterInteractor {
   private UserRepository repository;
-  private EncryptionService security;
 
-  public UserClaims register(UserRequest user) throws Exception {
-    String hashedPassword = security.encrypt(user.getPassword());
-
-    user.setPassword(hashedPassword);
-
+  public User register(UserRequest user) throws Exception {
     return repository.add(user);
   }
 }
