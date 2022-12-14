@@ -1,11 +1,15 @@
 package com.splitscale.fordastore.core.repositories;
 
 import com.splitscale.fordastore.core.user.User;
+import com.splitscale.fordastore.core.user.UserRequest;
 
 public interface UserRepository {
-  public User findByUsername(String username);
 
-  public User findByUID(String uid);
+  public User findByUID(String uid) throws Exception;
 
-  public boolean add(User user);
+  public User findByUsername(String username) throws Exception;
+
+  public User add(UserRequest userRequest) throws Exception;
+
+  public boolean update(Long id, UserRequest userRequest) throws Exception;
 }
