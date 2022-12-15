@@ -24,15 +24,15 @@ public class ContainerTest {
 
     String name = "some name";
     long containerId = 2;
-    long ownerId = 223;
+    String ownerId = "ahdiawuhd-awdnaikwbdikab-adnwkiabd";
 
     when(container.getName()).thenReturn(name);
     when(container.getContainerID()).thenReturn(containerId);
-    when(container.getOwnerID()).thenReturn(ownerId);
+    when(container.getUid()).thenReturn(ownerId);
 
     assertEquals(name, container.getName());
     assertEquals(containerId, container.getContainerID());
-    assertEquals(ownerId, container.getOwnerID());
+    assertEquals(ownerId, container.getUid());
   }
 
   @Test
@@ -40,17 +40,17 @@ public class ContainerTest {
   public void settersTest() {
     String name = "some name";
     long containerId = 2;
-    long ownerId = 223;
+    String ownerId = "ajowjdoa-awdnaibndk-wadandiawjdanwkd";
 
     ArgumentCaptor<String> stringCaptor = ArgumentCaptor.forClass(String.class);
-    ArgumentCaptor<Long> longCaptor = ArgumentCaptor.forClass(long.class);
+    ArgumentCaptor<Long> longCaptor = ArgumentCaptor.forClass(Long.class);
 
     container.setName(name);
     container.setContainerID(containerId);
-    container.setOwnerID(ownerId);
+    container.setUid(ownerId);
 
     verify(container).setName(stringCaptor.capture());
     verify(container).setContainerID(longCaptor.capture());
-    verify(container).setOwnerID(longCaptor.capture());
+    verify(container).setUid(stringCaptor.capture());
   }
 }

@@ -11,51 +11,51 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.splitscale.fordastore.core.content.Content;
+import com.splitscale.fordastore.core.content.Url;
 import com.splitscale.fordastore.core.content.Credential;
 
 @ExtendWith(value = { MockitoExtension.class })
 public class ContentTest {
 
   @Mock
-  Content content;
+  Url fixture;
 
   @Mock
   Credential credential;
 
   @Test
-  @DisplayName("Test getters of content property")
+  @DisplayName("Test getters of url property")
   public void gettersTest() {
 
-    String name = "some name";
+    String data = "some url";
 
-    when(content.getData()).thenReturn(name);
-    when(content.getCredential()).thenReturn(credential);
+    when(fixture.getInnerData()).thenReturn(data);
+    when(fixture.getInnerCredential()).thenReturn(credential);
 
-    assertEquals(name, content.getData());
-    assertEquals(credential, content.getCredential());
+    assertEquals(data, fixture.getInnerData());
+    assertEquals(credential, fixture.getInnerCredential());
   }
 
   @Test
-  @DisplayName("Test setters of content property")
+  @DisplayName("Test setters of url property")
   public void settersTest() {
 
-    String name = "some name";
+    String data = "some url";
 
     ArgumentCaptor<String> stringCaptor = ArgumentCaptor.forClass(String.class);
     ArgumentCaptor<Credential> mockCaptor = ArgumentCaptor.forClass(Credential.class);
 
-    when(content.getData()).thenReturn(name);
-    when(content.getCredential()).thenReturn(credential);
+    when(fixture.getInnerData()).thenReturn(data);
+    when(fixture.getInnerCredential()).thenReturn(credential);
 
-    assertEquals(name, content.getData());
-    assertEquals(credential, content.getCredential());
+    assertEquals(data, fixture.getInnerData());
+    assertEquals(credential, fixture.getInnerCredential());
 
-    content.setData(name);
-    content.setCredential(credential);
+    fixture.setInnerData(data);
+    fixture.setInnerCredential(credential);
 
-    verify(content).setData(stringCaptor.capture());
-    verify(content).setCredential(mockCaptor.capture());
+    verify(fixture).setInnerData(stringCaptor.capture());
+    verify(fixture).setInnerCredential(mockCaptor.capture());
   }
 
 }

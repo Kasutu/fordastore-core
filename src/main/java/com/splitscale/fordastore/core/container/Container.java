@@ -1,16 +1,37 @@
 package com.splitscale.fordastore.core.container;
 
-public interface Container {
-  String getName();
+public class Container {
+  private long containerID;
+  private String uid;
+  private String name;
 
-  long getContainerID();
+  public Container(long containerID, String uid, String name) {
+    this.containerID = containerID;
+    this.uid = uid;
+    this.name = name;
+  }
 
-  long getOwnerID();
+  public long getContainerID() {
+    return containerID;
+  }
 
-  void setName(String name);
+  public void setContainerID(long containerID) {
+    this.containerID = containerID;
+  }
 
-  void setContainerID(long containerID);
+  public String getUid() {
+    return uid;
+  }
 
-  void setOwnerID(long userID);
+  public void setUid(String uid) {
+    this.uid = uid;
+  }
 
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
 }
