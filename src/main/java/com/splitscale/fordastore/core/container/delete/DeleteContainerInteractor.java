@@ -1,13 +1,13 @@
 package com.splitscale.fordastore.core.container.delete;
 
-import com.splitscale.fordastore.core.exceptions.ActionFailedException;
-import com.splitscale.fordastore.core.exceptions.ObjectNotFoundException;
+import java.io.IOException;
+
 import com.splitscale.fordastore.core.repositories.ContainerRepository;
 
 public class DeleteContainerInteractor {
   private ContainerRepository repository;
 
-  public boolean deleteContainer(long containerID) throws ActionFailedException, ObjectNotFoundException {
+  public boolean deleteContainer(long containerID) throws IOException {
     return repository.delete(containerID);
   }
 }

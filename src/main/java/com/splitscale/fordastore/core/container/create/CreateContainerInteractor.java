@@ -1,17 +1,19 @@
 package com.splitscale.fordastore.core.container.create;
 
+import java.io.IOException;
+
 import com.splitscale.fordastore.core.container.Container;
-import com.splitscale.fordastore.core.container.ContainerBuilder;
-import com.splitscale.fordastore.core.exceptions.ActionFailedException;
-import com.splitscale.fordastore.core.exceptions.ObjectAlreadyExistException;
+import com.splitscale.fordastore.core.container.ContainerRequest;
 import com.splitscale.fordastore.core.repositories.ContainerRepository;
 
 public class CreateContainerInteractor {
   private ContainerRepository repository;
 
-  public Container createContainer(String name, long ownerID)
-      throws ObjectAlreadyExistException, ActionFailedException {
+  public CreateContainerInteractor(ContainerRepository repository) {
+    this.repository = repository;
+  }
 
-    return repository.add(new ContainerBuilder(name, ownerID));
+  public Container createContainer(ContainerRequest container) throws IOException {
+    return repository.add(container);
   }
 }
