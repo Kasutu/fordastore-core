@@ -1,4 +1,4 @@
-package com.splitscale.fordastore.core.content;
+package com.splitscale.fordastore.core.url;
 
 public class Credential {
   private String username;

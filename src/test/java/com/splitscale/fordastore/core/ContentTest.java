@@ -11,8 +11,8 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.splitscale.fordastore.core.content.Url;
-import com.splitscale.fordastore.core.content.Credential;
+import com.splitscale.fordastore.core.url.Credential;
+import com.splitscale.fordastore.core.url.Url;
 
 @ExtendWith(value = { MockitoExtension.class })
 public class ContentTest {

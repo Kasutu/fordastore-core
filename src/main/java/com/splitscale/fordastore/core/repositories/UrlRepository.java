@@ -3,9 +3,9 @@ package com.splitscale.fordastore.core.repositories;
 import java.io.IOException;
 import java.util.List;
 
-import com.splitscale.fordastore.core.content.Url;
+import com.splitscale.fordastore.core.url.Url;
 
-public interface ContentRepository {
+public interface UrlRepository {
 
   public List<Url> getALLByOwnerID(long ownerID) throws IOException;
 

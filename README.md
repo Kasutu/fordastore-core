@@ -14,20 +14,20 @@ public interface UserRepository {
 }
 ```
 
-### ContentRepository
+### UrlRepository
 
 ```java
-public interface ContentRepository {
+public interface UrlRepository {
 
-  public List<Content> getALLByOwnerID(long ownerID);
+  public List<Url> getALLByOwnerID(long ownerID) throws IOException;
 
-  public Content getByContentID(long contentID);
+  public Url getByContentID(long contentID) throws IOException;
 
-  public Content add(Content container) throws ObjectAlreadyExistException, ActionFailedException;
+  public Url add(Url container) throws IOException;
 
-  public Content update(Content container) throws ActionFailedException;
+  public Url update(Url container) throws IOException;
 
-  public boolean delete(long containerID) throws ActionFailedException;
+  public boolean delete(long containerID) throws IOException;
 }
 ```
 
@@ -73,21 +73,22 @@ public interface User {
 }
 ```
 
-### Content
+### Url
 
 ```java
 
-public interface Content {
+public class Url {
 
-  public String getData();
+  public String getInnerData();
 
-  public Credential getCredential();
+  public void setInnerData(String innerData);
 
-  public void setData(String data);
+  public Credential getInnerCredential();
 
-  public void setCredential(Credential credential);
+  public void setInnerCredential(Credential innerCredential);
 
 }
+
 
 ```
 
@@ -113,21 +114,6 @@ public interface Container {
 
 # Exception definitions
 
-### ActionFailedException
+### `IOException`
 
-```java
-public class ActionFailedException extends Exception
-
-```
-
-### ObjectNotFoundException
-
-```java
-public class ObjectAlreadyExistException extends Exception
-```
-
-### ObjectNotFoundException
-
-```java
-public class ObjectNotFoundException extends Exception
-```
+Having some problem reading/writing? Throw this exception.
