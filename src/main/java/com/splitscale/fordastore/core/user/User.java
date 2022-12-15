@@ -1,6 +1,7 @@
 package com.splitscale.fordastore.core.user;
 
 public class User {
+  private Long id;
   private String uid;
   private String username;
   private String password;
@@ -9,7 +10,8 @@ public class User {
     // default constructor
   }
 
-  public User(String uid, String username, String password) {
+  public User(Long id, String uid, String username, String password) {
+    this.id = id;
     this.uid = uid;
     this.username = username;
     this.password = password;
@@ -29,6 +31,14 @@ public class User {
 
   public void setUsername(String username) {
     this.username = username;
+  }
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
   }
 
   public String getUid() {
