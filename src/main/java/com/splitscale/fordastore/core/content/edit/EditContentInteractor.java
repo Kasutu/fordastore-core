@@ -1,13 +1,14 @@
 package com.splitscale.fordastore.core.content.edit;
 
-import com.splitscale.fordastore.core.content.Content;
-import com.splitscale.fordastore.core.exceptions.ActionFailedException;
+import java.io.IOException;
+
+import com.splitscale.fordastore.core.content.Url;
 import com.splitscale.fordastore.core.repositories.ContentRepository;
 
 public class EditContentInteractor {
   ContentRepository repository;
 
-  public Content updateContent(Content content) throws ActionFailedException {
+  public Url updateContent(Url content) throws IOException {
     return repository.update(content);
   }
 }

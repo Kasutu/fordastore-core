@@ -1,20 +1,19 @@
 package com.splitscale.fordastore.core.repositories;
 
+import java.io.IOException;
 import java.util.List;
 
-import com.splitscale.fordastore.core.content.Content;
-import com.splitscale.fordastore.core.exceptions.ActionFailedException;
-import com.splitscale.fordastore.core.exceptions.ObjectAlreadyExistException;
+import com.splitscale.fordastore.core.content.Url;
 
 public interface ContentRepository {
 
-  public List<Content> getALLByOwnerID(long ownerID);
+  public List<Url> getALLByOwnerID(long ownerID) throws IOException;
 
-  public Content getByContentID(long contentID);
+  public Url getByContentID(long contentID) throws IOException;
 
-  public Content add(Content container) throws ObjectAlreadyExistException, ActionFailedException;
+  public Url add(Url container) throws IOException;
 
-  public Content update(Content container) throws ActionFailedException;
+  public Url update(Url container) throws IOException;
 
-  public boolean delete(long containerID) throws ActionFailedException;
+  public boolean delete(long containerID) throws IOException;
 }
