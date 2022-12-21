@@ -5,6 +5,10 @@ public class Container {
   private String uid;
   private String name;
 
+  public Container() {
+    //default
+  }
+
   public Container(long containerID, String uid, String name) {
     this.containerID = containerID;
     this.uid = uid;
