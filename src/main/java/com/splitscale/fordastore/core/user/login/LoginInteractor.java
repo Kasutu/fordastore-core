@@ -9,6 +9,10 @@ import com.splitscale.fordastore.core.user.UserRequest;
 public class LoginInteractor {
   private UserRepository repository;
 
+  public LoginInteractor(UserRepository repository) {
+    this.repository = repository;
+  }
+
   public User login(UserRequest userRequest) throws IOException {
     return repository.findByUsername(userRequest.getUsername());
   }
