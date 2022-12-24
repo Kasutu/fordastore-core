@@ -9,6 +9,10 @@ import com.splitscale.fordastore.core.user.UserRequest;
 public class RegisterInteractor {
   private UserRepository repository;
 
+  public RegisterInteractor(UserRepository repository) {
+    this.repository = repository;
+  }
+
   public User register(UserRequest user) throws IOException {
     return repository.add(user);
   }
