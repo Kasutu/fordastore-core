@@ -15,9 +15,9 @@ public interface ContainerRepository {
 
   public Container getByContainerID(long containerID) throws IOException;
 
-  public Container add(ContainerRequest container) throws IOException;
+  public void add(ContainerRequest container) throws IOException;
 
-  public Container update(Container container) throws IOException;
+  public void update(Container container) throws IOException;
 
-  public boolean delete(long containerID) throws IOException;
+  public void delete(long containerID) throws IOException;
 }
