@@ -4,16 +4,17 @@ import java.io.IOException;
 import java.util.List;
 
 import com.splitscale.fordastore.core.url.Url;
+import com.splitscale.fordastore.core.url.UrlRequest;
 
 public interface UrlRepository {
 
-  public List<Url> getALLByOwnerID(long ownerID) throws IOException;
+  public List<Url> getALLByContainerID(long containerID) throws IOException;
 
-  public Url getByContentID(long contentID) throws IOException;
+  public Url getByUrlID(long urlID) throws IOException;
 
-  public Url add(Url container) throws IOException;
+  public void add(UrlRequest url) throws IOException;
 
-  public Url update(Url container) throws IOException;
+  public void update(Url url) throws IOException;
 
-  public boolean delete(long containerID) throws IOException;
+  public void delete(long urlID) throws IOException;
 }

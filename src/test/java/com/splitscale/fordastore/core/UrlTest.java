@@ -11,29 +11,26 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.splitscale.fordastore.core.url.Credential;
 import com.splitscale.fordastore.core.url.Url;
 
 @ExtendWith(value = { MockitoExtension.class })
-public class ContentTest {
+public class UrlTest {
 
   @Mock
   Url fixture;
-
-  @Mock
-  Credential credential;
 
   @Test
   @DisplayName("Test getters of url property")
   public void gettersTest() {
 
     String data = "some url";
+    long id = 123451234;
 
-    when(fixture.getInnerData()).thenReturn(data);
-    when(fixture.getInnerCredential()).thenReturn(credential);
+    when(fixture.getInnerUrl()).thenReturn(data);
+    when(fixture.getUrlID()).thenReturn(id);
 
-    assertEquals(data, fixture.getInnerData());
-    assertEquals(credential, fixture.getInnerCredential());
+    assertEquals(data, fixture.getInnerUrl());
+    assertEquals(id, fixture.getUrlID());
   }
 
   @Test
@@ -41,21 +38,15 @@ public class ContentTest {
   public void settersTest() {
 
     String data = "some url";
+    long id = 123451234;
 
     ArgumentCaptor<String> stringCaptor = ArgumentCaptor.forClass(String.class);
-    ArgumentCaptor<Credential> mockCaptor = ArgumentCaptor.forClass(Credential.class);
+    ArgumentCaptor<Long> longCaptor = ArgumentCaptor.forClass(Long.class);
 
-    when(fixture.getInnerData()).thenReturn(data);
-    when(fixture.getInnerCredential()).thenReturn(credential);
+    fixture.setInnerUrl(data);
+    fixture.setUrlID(id);
 
-    assertEquals(data, fixture.getInnerData());
-    assertEquals(credential, fixture.getInnerCredential());
-
-    fixture.setInnerData(data);
-    fixture.setInnerCredential(credential);
-
-    verify(fixture).setInnerData(stringCaptor.capture());
-    verify(fixture).setInnerCredential(mockCaptor.capture());
+    verify(fixture).setInnerUrl(stringCaptor.capture());
+    verify(fixture).setUrlID(longCaptor.capture());
   }
-
 }

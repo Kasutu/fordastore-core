@@ -1,28 +1,31 @@
 package com.splitscale.fordastore.core.url;
 
 public class Url {
-  private String innerData;
-  private Credential innerCredential;
+  private long urlID;
+  private String innerUrl;
 
-  public Url(String innerData, Credential innerCredential) {
-    this.innerData = innerData;
-    this.innerCredential = innerCredential;
+  public Url() {
+    // default constructor
   }
 
-  public String getInnerData() {
-    return innerData;
+  public Url(long urlID, String innerUrl) {
+    this.urlID = urlID;
+    this.innerUrl = innerUrl;
   }
 
-  public void setInnerData(String innerData) {
-    this.innerData = innerData;
+  public String getInnerUrl() {
+    return innerUrl;
   }
 
-  public Credential getInnerCredential() {
-    return innerCredential;
+  public void setInnerUrl(String innerUrl) {
+    this.innerUrl = innerUrl;
   }
 
-  public void setInnerCredential(Credential innerCredential) {
-    this.innerCredential = innerCredential;
+  public long getUrlID() {
+    return urlID;
   }
 
+  public void setUrlID(long urlID) {
+    this.urlID = urlID;
+  }
 }

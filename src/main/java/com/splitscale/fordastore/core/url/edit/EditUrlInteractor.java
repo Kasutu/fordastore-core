@@ -12,7 +12,7 @@ public class EditUrlInteractor {
     this.repository = repository;
   }
 
-  public Url updateContent(Url content) throws IOException {
-    return repository.update(content);
+  public void updateUrl(Url url) throws IOException {
+    repository.update(url);
   }
 }

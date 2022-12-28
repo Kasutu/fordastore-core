@@ -11,11 +11,19 @@ public class AuthInteractor {
     this.repository = repository;
   }
 
-  public boolean insertToken(PublicKey token) throws IOException {
-    return repository.insert(token);
+  public void insertToken(AuthPublicKey token) throws IOException {
+    repository.insert(token);
   }
 
-  public boolean deleteToken(String uid) throws IOException {
-    return repository.deleteByID(uid);
+  public void deleteToken(String uid) throws IOException {
+    repository.deleteByUid(uid);
+  }
+
+  public AuthPublicKey getTokenByUid(String uid) throws IOException {
+    return repository.getByUid(uid);
+  }
+
+  public void deleteTokenByUid(String uid) throws IOException {
+    repository.deleteByUid(uid);
   }
 }

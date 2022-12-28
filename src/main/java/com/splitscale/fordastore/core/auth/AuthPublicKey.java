@@ -1,10 +1,10 @@
 package com.splitscale.fordastore.core.auth;
 
-public class PublicKey {
+public class AuthPublicKey {
   private String uid;
   private String keyValue;
 
-  public PublicKey(String uid, String keyValue) {
+  public AuthPublicKey(String uid, String keyValue) {
     this.uid = uid;
     this.keyValue = keyValue;
   }

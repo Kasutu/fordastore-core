@@ -11,7 +11,7 @@ public interface UserRepository {
 
   public User findByUsername(String username) throws IOException;
 
-  public User add(UserRequest userRequest) throws IOException;
+  public void add(UserRequest userRequest) throws IOException;
 
   public boolean update(Long id, UserRequest userRequest) throws IOException;
 }
