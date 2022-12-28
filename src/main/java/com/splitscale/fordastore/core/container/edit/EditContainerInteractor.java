@@ -12,7 +12,7 @@ public class EditContainerInteractor {
     this.repository = repository;
   }
 
-  public Container editContainer(Container container) throws IOException {
-    return repository.update(container);
+  public void editContainer(Container container) throws IOException {
+    repository.update(container);
   }
 }

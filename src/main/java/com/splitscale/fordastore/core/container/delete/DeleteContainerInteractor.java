@@ -11,7 +11,7 @@ public class DeleteContainerInteractor {
     this.repository = repository;
   }
 
-  public boolean deleteContainer(long containerID) throws IOException {
-    return repository.delete(containerID);
+  public void deleteContainer(long containerID) throws IOException {
+    repository.delete(containerID);
   }
 }
