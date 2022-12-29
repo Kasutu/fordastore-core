@@ -2,11 +2,15 @@ package com.splitscale.fordastore.core.auth;
 
 public class AuthPublicKey {
   private String uid;
-  private String keyValue;
+  private String publicKey;
 
-  public AuthPublicKey(String uid, String keyValue) {
+  public AuthPublicKey() {
+    // default constructor
+  }
+
+  public AuthPublicKey(String uid, String publicKey) {
     this.uid = uid;
-    this.keyValue = keyValue;
+    this.publicKey = publicKey;
   }
 
   public String getUid() {
@@ -14,7 +18,15 @@ public class AuthPublicKey {
   }
 
   public String getPublicKey() {
-    return keyValue;
+    return publicKey;
+  }
+
+  public void setUid(String uid) {
+    this.uid = uid;
+  }
+
+  public void setPublicKey(String publicKey) {
+    this.publicKey = publicKey;
   }
 
 }
