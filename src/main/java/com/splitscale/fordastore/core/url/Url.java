@@ -2,15 +2,33 @@ package com.splitscale.fordastore.core.url;
 
 public class Url {
   private long urlID;
+  private long containerID;
   private String innerUrl;
+
+  public Url(long urlID, long containerID, String innerUrl) {
+    this.urlID = urlID;
+    this.containerID = containerID;
+    this.innerUrl = innerUrl;
+  }
 
   public Url() {
     // default constructor
   }
 
-  public Url(long urlID, String innerUrl) {
+  public long getUrlID() {
+    return urlID;
+  }
+
+  public void setUrlID(long urlID) {
     this.urlID = urlID;
-    this.innerUrl = innerUrl;
+  }
+
+  public long getContainerID() {
+    return containerID;
+  }
+
+  public void setContainerID(long containerID) {
+    this.containerID = containerID;
   }
 
   public String getInnerUrl() {
@@ -21,11 +39,4 @@ public class Url {
     this.innerUrl = innerUrl;
   }
 
-  public long getUrlID() {
-    return urlID;
-  }
-
-  public void setUrlID(long urlID) {
-    this.urlID = urlID;
-  }
 }

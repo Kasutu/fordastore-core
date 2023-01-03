@@ -3,6 +3,7 @@ package com.splitscale.fordastore.core.url.create;
 import java.io.IOException;
 
 import com.splitscale.fordastore.core.repositories.UrlRepository;
+import com.splitscale.fordastore.core.url.Url;
 import com.splitscale.fordastore.core.url.UrlRequest;
 
 public class CreateUrlInteractor {
@@ -12,7 +13,7 @@ public class CreateUrlInteractor {
     this.repository = repository;
   }
 
-  public void createContent(UrlRequest content) throws IOException {
-    repository.add(content);
+  public Url createUrl(UrlRequest url) throws IOException {
+    return repository.add(url.getInnerUrl(), url.getContainerID());
   }
 }

@@ -13,6 +13,6 @@ public class EditContainerInteractor {
   }
 
   public void editContainer(Container container) throws IOException {
-    repository.update(container);
+    repository.update(container.getName(), container.getContainerID());
   }
 }
