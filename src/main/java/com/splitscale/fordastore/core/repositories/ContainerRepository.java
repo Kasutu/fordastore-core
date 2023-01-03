@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.List;
 
 import com.splitscale.fordastore.core.container.Container;
-import com.splitscale.fordastore.core.container.ContainerRequest;
 
 public interface ContainerRepository {
   public List<Container> getListByUid(String uid) throws IOException;
@@ -15,9 +14,9 @@ public interface ContainerRepository {
 
   public Container getByContainerID(long containerID) throws IOException;
 
-  public void add(ContainerRequest container) throws IOException;
+  public Container add(String containerName, String uid) throws IOException;
 
-  public void update(Container container) throws IOException;
+  public void update(String containerName, Long containerId) throws IOException;
 
-  public void delete(long containerID) throws IOException;
+  public void delete(Long containerId) throws IOException;
 }
