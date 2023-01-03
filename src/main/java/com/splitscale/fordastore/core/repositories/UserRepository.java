@@ -3,6 +3,7 @@ package com.splitscale.fordastore.core.repositories;
 import java.io.IOException;
 
 import com.splitscale.fordastore.core.user.User;
+import com.splitscale.fordastore.core.user.UserRequest;
 
 public interface UserRepository {
 
@@ -10,7 +11,7 @@ public interface UserRepository {
 
   public User findByUsername(String username) throws IOException;
 
-  public User add(String username, String password) throws IOException;
+  public void add(UserRequest userRequest) throws IOException;
 
-  public User update(String uid, String username, String password) throws IOException;
+  public boolean update(Long id, UserRequest userRequest) throws IOException;
 }

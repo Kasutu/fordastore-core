@@ -13,6 +13,6 @@ public class EditUrlInteractor {
   }
 
   public void updateUrl(Url url) throws IOException {
-    repository.update(url.getInnerUrl(), url.getContainerID());
+    repository.update(url);
   }
 }
