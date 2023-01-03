@@ -11,8 +11,8 @@ public class DeleteUrlInteractor {
     this.repository = repository;
   }
 
-  public void deleteContentById(long id) throws IOException {
-    repository.delete(id);
+  public void deleteUrlById(long id) throws IOException {
+    repository.deleteByUrlId(id);
   }
 
 }
