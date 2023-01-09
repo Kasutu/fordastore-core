@@ -4,6 +4,10 @@ public class UrlResponse {
   private Long urlID;
   private String innerUrl;
 
+  public UrlResponse() {
+    // default constructor
+  }
+
   public UrlResponse(Long urlID, String innerUrl) {
     this.urlID = urlID;
     this.innerUrl = innerUrl;
