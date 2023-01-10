@@ -2,7 +2,7 @@ package com.splitscale.fordastore.core.container.edit;
 
 import java.io.IOException;
 
-import com.splitscale.fordastore.core.container.Container;
+import com.splitscale.fordastore.core.container.ContainerRequest;
 import com.splitscale.fordastore.core.repositories.ContainerRepository;
 
 public class EditContainerInteractor {
@@ -12,7 +12,7 @@ public class EditContainerInteractor {
     this.repository = repository;
   }
 
-  public void editContainer(Container container) throws IOException {
-    repository.update(container.getName(), container.getContainerID());
+  public void editContainer(ContainerRequest containerRequest, Long containerId) throws IOException {
+    repository.update(containerRequest.getName(), containerId);
   }
 }
