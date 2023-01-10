@@ -5,6 +5,10 @@ public class UrlRequest {
   private long containerID;
   private String innerUrl;
 
+  public UrlRequest() {
+    // default constructor
+  }
+
   public UrlRequest(long containerID, String innerUrl) {
     this.containerID = containerID;
     this.innerUrl = innerUrl;
